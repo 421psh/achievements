@@ -1,1 +1,89 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+        }
+
+        .page-title {
+            font-size: 48px; /* Adjust this value to your desired font size */
+            color: black;
+            text-align: center;
+            margin: 40px 0; /* Adjust this value to your desired margin */
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 200px;
+            height: auto;
+        }
+
+        main {
+            margin-left: 60px;
+        }
+
+        section {
+            margin-left: 120px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 5px 0;
+            background-color: #FFFFFF;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="page-title">Группа компьютерного зрения</h1>
+
+    <main>
+        <h1>Достижения</h1>
+    </main>
+
+    <section id="videos">
+        <h2>Выступления</h2>
+        <ul>
+            <li><a href="link_to_video_1">Video Title 1</a></li>
+            <li><a href="link_to_video_2">Video Title 2</a></li>
+            <li><a href="link_to_video_3">Video Title 3</a></li>
+        </ul>
+    </section>
+
+    <section id="articles">
+        <h2>Статьи</h2>
+        <ul>
+            <li><a href="link_to_article_1">Article Title 1</a></li>
+            <li><a href="link_to_article_2">Article Title 2</a></li>
+            <li><a href="link_to_article_3">Article Title 3</a></li>
+        </ul>
+    </section>
+</div>
+
+<img src="./docs/images/rusagro-logo.png" alt="Logo" class="logo">
+
+<footer>
+    <p>Группа компьютерного зрения. Русагро Тех. © 2024</p>
+</footer>
+
+</body>
+</html>
