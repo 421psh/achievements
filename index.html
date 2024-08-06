@@ -13,41 +13,52 @@
         body {
             display: flex;
             flex-direction: column;
+            margin: 0;
+            padding: 0;
+            background-image: url('/docs/images/background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .container {
             flex: 1;
         }
 
-        .page-title {
-            font-size: 3vw; /* 4% of the viewport width */
-            color: black;
-            text-align: center;
-            margin: 4vh 0; /* 4% of the viewport height */
-        }
-
         .logo {
             position: absolute;
             top: 2vh; /* 2% of the viewport height */
             right: 2vw; /* 2% of the viewport width */
-            width: 6vw; /* 20% of the viewport width */
-            height: auto;
-            background-color: transparent;/* Maintain aspect ratio */
+            width: auto;
+            height: 6vh;
+            background-color: transparent; /* Maintain aspect ratio */
+        }
+
+        .page-title {
+            font-size: 4vh; /* 4% of the viewport width */
+            color: white;
+            text-align: center;
+            margin: 4vh 0; /* 4% of the viewport height */
         }
 
         main {
+            font-size: 2vh;
+            color: white;
             margin-left: 2vw; /* 5% of the viewport width */
         }
 
         section {
+            font-size: 2vh;
+            color: white;
             margin-left: 4vw; /* 10% of the viewport width */
         }
 
         footer {
             text-align: center;
+            color: white;
             padding: 1vh 0; /* 1% of the viewport height */
             background-color: transparent;
-            font-size: 0.8rem; /* 1.2 times the root element's font size */
+            font-size: 1.2vh; /* 1.2 times the root element's font size */
         }
     </style>
 </head>
@@ -80,7 +91,7 @@
     </section>
 </div>
 
-<img src="./docs/images/rusagro-logo.png" alt="Logo" class="logo">
+<img src="./docs/images/rusagro-logo.svg" alt="Logo" class="logo">
 
 <footer>
     <p>Группа компьютерного зрения. Русагро Тех. © 2024</p>
