@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         html, body {
-            height: 100%;
+            min-height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
         }
@@ -36,12 +36,15 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin: 2vh 0;
+            padding-top: 1vh;
+            margin-left: 1vh;
+            margin-right: 1vh;
+            background-color: rgba(0, 3, 37, 0.5);
+            border-radius: 5%;
         }
 
         .photo {
             flex: 1 1 10%;
-            margin: 1vh;
             text-align: center;
         }
 
@@ -55,19 +58,27 @@
         .photo p {
             color: white;
             font-size: 2vh;
-            margin-top: 1vh;
         }
 
         main {
-            font-size: 2vh;
             color: white;
-            margin-left: 2vw;
+            margin-top: 2vh;
+            margin-left: 1vh;
+            margin-right: 1vh;
+            background-color: rgba(0, 3, 37, 0.5);
+            border-radius: 5%;
+            padding-top: 2vh;
+            padding-bottom: 8vh;
         }
 
-        section {
+        main section {
+            font-size: 2.6vh;
+            margin-left: 4vh;
+        }
+
+        .section-extra-margin {
             font-size: 2vh;
-            color: white;
-            margin-left: 4vw;
+            margin-left: 7vh;
         }
 
         .link {
@@ -100,7 +111,23 @@
             margin: 0;
             font-size: 1vh;
             color: white;
+            margin-bottom: 0.5vh;
         }
+
+        footer a {
+            font-size: 1.4vh;
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer span {
+            font-size: 1.4vh;
+        }
+
     </style>
 </head>
 <body>
@@ -133,51 +160,56 @@
     </div>
 
     <main>
-        <h1>Достижения</h1>
-    </main>
-
-    <section id="videos">
-        <h2>Выступления</h2>
-        <ul>
-            <li>
-                <a href="https://www.youtube.com/watch?v=ZCJ29l_-azw" class="link">Active Learning в задаче определения температуры животных</a> - <span
-                    class="additional-text">CodeFest 14</span>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/watch?v=FAxqEVv-Ujc" class="link">Оптимизация работы видеоаналитических сервисов в животноводстве с помощью Prefect</a> - <span
-                    class="additional-text">MLечный путь 23</span>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/watch?v=DFwbWvvkoR8" class="link">Дискуссия «Потребности ML рынка России»</a> - <span
-                    class="additional-text">MLечный путь 23</span>
-            </li>
-        </ul>
-    </section>
-
-    <section id="articles">
-        <h2>Статьи</h2>
-        <ul>
-            <li>
-                <a href="https://habr.com/ru/companies/selectel/articles/779740/"
-                   class="link">ML в животноводстве. Как ГК «Русагро» училось считать
-                    поголовье свиней</a> - <span
-                    class="additional-text">Статья Хабр</span>
-            </li>
-            <li>
-                <a href="https://www.jetinfo.ru/journals/kak-ukrotit-lavinu-dannyh/"
-                   class="link">Как мы разработали сервис для анализа поведения
-                    свиней</a> - <span
-                    class="additional-text">Статья в журнале JetInfo (cтраница
+        <section><h1>Достижения</h1></section>
+        <section id="videos" class="section-extra-margin">
+            <h2>Выступления</h2>
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=ZCJ29l_-azw" class="link">Active
+                        Learning в задаче определения температуры животных</a> - <span
+                        class="additional-text">CodeFest 14</span>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=FAxqEVv-Ujc" class="link">Оптимизация
+                        работы видеоаналитических сервисов в животноводстве с помощью
+                        Prefect</a> - <span
+                        class="additional-text">MLечный путь 23</span>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=DFwbWvvkoR8" class="link">Дискуссия
+                        «Потребности ML рынка России»</a> - <span
+                        class="additional-text">MLечный путь 23</span>
+                </li>
+            </ul>
+        </section>
+        <section id="articles" class="section-extra-margin">
+            <h2>Статьи</h2>
+            <ul>
+                <li>
+                    <a href="https://habr.com/ru/companies/selectel/articles/779740/"
+                       class="link">ML в животноводстве. Как ГК «Русагро» училось
+                        считать
+                        поголовье свиней</a> - <span
+                        class="additional-text">Статья Хабр</span>
+                </li>
+                <li>
+                    <a href="https://www.jetinfo.ru/journals/kak-ukrotit-lavinu-dannyh/"
+                       class="link">Как мы разработали сервис для анализа поведения
+                        свиней</a> - <span
+                        class="additional-text">Статья в журнале JetInfo (cтраница
                 90)</span>
-            </li>
-        </ul>
-    </section>
+                </li>
+            </ul>
+        </section>
+    </main>
 </div>
 
 <footer>
     <img src="./docs/images/rusagro-logo.svg" alt="Logo" class="logo">
-    <p>Группа компьютерного зрения. Русагро Тех. © 2024</p>
+    <p><span>Contact us:</span> <a href="mailto:pp.shiryaev@rusagro.tech">pp.shiryaev@rusagro.tech</a></p>
+    <p>© 2024 Русагро Тех. All rights reserved.</p>
 </footer>
 
 </body>
 </html>
+<!-- God bless ChatGPT. -->
