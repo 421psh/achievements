@@ -15,7 +15,7 @@
             flex-direction: column;
             margin: 0;
             padding: 0;
-            background-image: url('./docs/images/background.png');
+            background-image: url('./docs/images/background.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -25,20 +25,37 @@
             flex: 1;
         }
 
-        .logo {
-            position: absolute;
-            top: 2vh; /* 2% of the viewport height */
-            right: 2vw; /* 2% of the viewport width */
-            width: auto;
-            height: 6vh;
-            background-color: transparent; /* Maintain aspect ratio */
-        }
-
         .page-title {
             font-size: 4vh; /* 4% of the viewport width */
             color: white;
             text-align: center;
             margin: 4vh 0; /* 4% of the viewport height */
+        }
+
+        .photo-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2vh 0;
+        }
+
+        .photo {
+            flex: 1 1 20%; /* Flex-grow, flex-shrink, flex-basis */
+            margin: 0.5vh;
+            text-align: center;
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            border-radius: 5%;
+        }
+
+        .photo p {
+            color: white;
+            font-size: 2vh;
+            margin-top: 1vh;
         }
 
         main {
@@ -53,12 +70,33 @@
             margin-left: 4vw; /* 10% of the viewport width */
         }
 
+        .link {
+            color: papayawhip; /* Example style for the link */
+        }
+
+        .additional-text {
+            color: white; /* Example style for the additional text */
+        }
+
         footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            color: white;
-            padding: 1vh 0; /* 1% of the viewport height */
-            background-color: transparent;
-            font-size: 1.2vh; /* 1.2 times the root element's font size */
+            padding: 2vh; /* Footer padding as a percentage of the viewport height */
+            background-color: transparent; /* Example transparent background color */
+        }
+
+        footer .logo {
+            width: auto;
+            height: 4vh; /* Logo width as a percentage of the viewport width */
+            margin-bottom: 1vh; /* Space between the logo and the text */
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1vh; /* Font size as a percentage of the viewport height */
+            color: white; /* Example transparent text color */
         }
     </style>
 </head>
@@ -68,6 +106,29 @@
 
     <h1 class="page-title">Группа компьютерного зрения</h1>
 
+    <div class="photo-section">
+        <div class="photo">
+            <img src="./docs/images/persons/person_1_crop.jpg" alt="Person 1">
+            <p>Павел Ширяев<br><span style="font-size: 0.8em;">Руководитель
+                группы</span></p>
+        </div>
+        <div class="photo">
+            <img src="./docs/images/persons/person_2_crop.jpg"" alt="Person 2">
+            <p>Адель Самигуллин<br><span style="font-size: 0.8em;">Разработчик</span>
+            </p>
+        </div>
+        <div class="photo">
+            <img src="./docs/images/persons/person_3_crop.jpg" alt="Person 3">
+            <p>Николай Полянский<br><span style="font-size: 0.8em;">Разработчик</span>
+            </p>
+        </div>
+        <div class="photo">
+            <img src="./docs/images/persons/person_4_crop.jpg" alt="Person 4">
+            <p>Владимир Куляшов<br><span style="font-size: 0.8em;">MLOps инженер</span>
+            </p>
+        </div>
+    </div>
+
     <main>
         <h1>Достижения</h1>
     </main>
@@ -75,25 +136,43 @@
     <section id="videos">
         <h2>Выступления</h2>
         <ul>
-            <li><a href="link_to_video_1">Video Title 1</a></li>
-            <li><a href="link_to_video_2">Video Title 2</a></li>
-            <li><a href="link_to_video_3">Video Title 3</a></li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=ZCJ29l_-azw" class="link">Active Learning в задаче определения температуры животных</a> - <span
+                    class="additional-text">CodeFest 14</span>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=FAxqEVv-Ujc" class="link">Оптимизация работы видеоаналитических сервисов в животноводстве с помощью Prefect</a> - <span
+                    class="additional-text">MLечный путь 23</span>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=DFwbWvvkoR8" class="link">Дискуссия «Потребности ML рынка России»</a> - <span
+                    class="additional-text">MLечный путь 23</span>
+            </li>
         </ul>
     </section>
 
     <section id="articles">
         <h2>Статьи</h2>
         <ul>
-            <li><a href="link_to_article_1">Article Title 1</a></li>
-            <li><a href="link_to_article_2">Article Title 2</a></li>
-            <li><a href="link_to_article_3">Article Title 3</a></li>
+            <li>
+                <a href="https://habr.com/ru/companies/selectel/articles/779740/"
+                   class="link">ML в животноводстве. Как ГК «Русагро» училось считать
+                    поголовье свиней</a> - <span
+                    class="additional-text">Статья Хабр</span>
+            </li>
+            <li>
+                <a href="https://www.jetinfo.ru/journals/kak-ukrotit-lavinu-dannyh/"
+                   class="link">Как мы разработали сервис для анализа поведения
+                    свиней</a> - <span
+                    class="additional-text">Статья в журнале JetInfo (cтраница
+                90)</span>
+            </li>
         </ul>
     </section>
 </div>
 
-<img src="./docs/images/rusagro-logo.svg" alt="Logo" class="logo">
-
 <footer>
+    <img src="./docs/images/rusagro-logo.svg" alt="Logo" class="logo">
     <p>Группа компьютерного зрения. Русагро Тех. © 2024</p>
 </footer>
 
